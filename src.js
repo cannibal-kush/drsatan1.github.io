@@ -14,7 +14,7 @@ $(document).ready(function(){
 		if (thisLast == last){
 			$(this).parent().addClass("active");
 		}
-		if (thisLast == ""){
+		if (thisLast.length == 0){
 			$(this).parent().addClass("active");
 		}
 	});
