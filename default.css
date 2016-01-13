@@ -298,7 +298,8 @@
 	#header-wrapper
 	{
 		position: relative;
-		padding: 0em 0em 11em 0em;
+		padding: 0em 0em 38em 11em;
+		
 		background: #111111 url(images/header-bg.jpg) no-repeat center;
 		background-size: cover;
 	}
