@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('#menuJs').append('<li><a href="about.html" accesskey="2" title="">About Us</a></li>');
 	$('#menuJs').append('<li><a href="solutions.html" accesskey="3" title="">Services & Solutions</a></li>');
 	$('#menuJs').append('<li><a href="careers.html" accesskey="4" title="">Careers</a></li>');
-
+	
 	$('#menuJs li a').each(function(){
 		var here = this.href;
 		var thisLast = here.substring(here.lastIndexOf("/") + 1, here.length);
@@ -14,7 +14,9 @@ $(document).ready(function(){
 		if (thisLast == last){
 			$(this).parent().addClass("active");
 		} else{
-			$(this).parent().removeClass("active");
+			if(pathname.match(/html$/)){
+				$(this).parent().removeClass("active");
+			}
 		}
 	});
 });
