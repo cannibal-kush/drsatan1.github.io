@@ -300,7 +300,7 @@
 
 	#header-wrapper
 	{
-		height:49em;
+		height:100vh;
 		position: static;
 		padding: 0; /*EAT ME*/
 		/*padding: 0em 0em 38em 11em;*/
