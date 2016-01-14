@@ -1,5 +1,7 @@
 	html, body
 	{
+	    margin: 0;
+        padding: 0;
 		height: 100%;
 	}
 	
@@ -200,20 +202,21 @@
 	.box3,
 	.box4
 	{
-		width: 235px;
+		width: 240px;
+		display: inline-block;
 	}
 	
 	.box1,
 	.box2,
 	.box3,
 	{
-		float: left;
+		/*float: left;*/
 		margin-right: 20px;
 	}
 	
 	.box4
 	{
-		float: right;
+		/*float: right;*/
 	}
 	
 /*********************************************************************************/
@@ -286,7 +289,7 @@
 
 	#wrapper
 	{
-		position: relative;
+		position: static;
 		padding: 5em 0em 7em 0em;
 		background: #FFF;
 	}
@@ -297,17 +300,19 @@
 
 	#header-wrapper
 	{
-		position: relative;
-		padding: 0em 0em 38em 11em;
+		height:49em;
+		position: static;
+		padding: 0; /*EAT ME*/
+		/*padding: 0em 0em 38em 11em;*/
 		
 		background: #111111 url(images/header-bg.jpg) no-repeat center;
-		background-size: cover;
+		background-size: 100%;
 	}
 
 	#header
 	{
 		position: relative;
-		padding: 5em 0em;
+		padding: 0em 0em;
 	}
 
 /*********************************************************************************/
@@ -336,12 +341,27 @@
 /*********************************************************************************/
 /* Menu                                                                          */
 /*********************************************************************************/
+	#arrow img{
+		display:block;
+		margin: 0 auto;
+	}		
+	
+	#floating-nav-content {
+            top: 0;
+            width: 100%;
+            height: 4em;
+            position: fixed;
+			background-color: #000;
+            /*display: none;*/
+            color: #FFF;
+            padding: 5px;
+    }
 
 	#menu
 	{
 		position: absolute;
 		top: 1.5em;
-		right: 0;
+		right: 1em;
 	}
 	
 	#menu ul
@@ -479,7 +499,7 @@
 
 	#welcome
 	{
-		position: relative;
+		position: static;
 		padding: 7em 0em 7em 0em;
 		background: #2651a8;
 		background-size: cover;
@@ -503,13 +523,44 @@
 		background: #FFF;
 		color: #2651a8;
 	}
+	
+/*********************************************************************************/
+/* Welcome ALTERNATE                                                             */
+/*********************************************************************************/
+	
+	#welcome-alt
+	{
+		position: static;
+		padding: 7em 0em 7em 0em;
+		background: #aa9c39;
+		background-size: cover;
+		text-align: center;
+	}
+	
+	#welcome-alt .container
+	{
+		width: 1000px;
+		padding: 0px 100px;
+		color: rgba(255,255,255,0.8);
+	}
+	
+	#welcome-alt a
+	{
+		color: rgba(255,255,255,1);
+	}
+	
+	#welcome-alt .button
+	{
+		background: #2b4d00;
+		color: #fff;
+	}
 
 
 /*********************************************************************************/
 /* Extra                                                                         */
 /*********************************************************************************/
 
-	#three-column
+	#three-column, #two-column, #four-column
 	{
 		text-align: center;
 		color: rgba(0,0,0,0.6);
@@ -529,9 +580,8 @@
 		color: rgba(0,0,0,0.8);
 	}
 
-	#three-column .title .byline
+	#three-column .title .byline, #two-column .title .byline, #four-column .title .byline
 	{
 		text-align: center;
 		color: rgba(0,0,0,.5);
 	}
-
