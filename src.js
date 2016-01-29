@@ -13,6 +13,7 @@ $(document).ready(function(){
 	
 	if($(this).scrollTop() > 0){
 		$('#arrow').hide(0,null);
+		$('#floating-nav-content').css('background-color','#000');
 	} //IF YOU'RE SCROLLED PAST 0, HIDE THE ARROW (FOR REFRESHES)
 	
 	// ** Making the menu bar ** //
@@ -22,7 +23,7 @@ $(document).ready(function(){
 	$('#menuJs').append('<li class="active"><a href="index.html" accesskey="1" title="">Home</a></li>');
 	$('#menuJs').append('<li><a href="about.html" accesskey="2" title="">About Us</a></li>');
 	$('#menuJs').append('<li><a href="solutions.html" accesskey="3" title="">Services & Solutions</a></li>');
-	$('#menuJs').append('<li><a href="careers.html" accesskey="4" title="">Careers</a></li>');
+	/*$('#menuJs').append('<li><a href="careers.html" accesskey="4" title="">Careers</a></li>');*/
 	
 	$('#menuJs li a').each(function(){
 		var here = this.href;
@@ -48,6 +49,15 @@ $(document).ready(function(){
 		$('#arrow').hide(500,null); //SCROLL DOWN, HIDE BUTTON
 	});
 	
+	$('#aboutbtn').click(function(event){
+		$('#welcome').slideToggle();
+		event.preventDefault();
+	});
+	
+	$('#emailbtn').click(function(event){
+		$('#emailform').toggle();
+		event.preventDefault();
+	});
 });
 
 
@@ -68,11 +78,13 @@ $(document).ready(function(){
 		
 		if(currentScroll > $('#header-wrapper').offset().top){
 			$('#arrow').hide(500,null);
+			$('#floating-nav-content').css('background-color','#000');
 		}
 		
 		if(currentScroll == $('#header-wrapper').offset().top){
 			if($('#header-wrapper').length != 0){ //if the header image is even there,
 				$('#arrow').show(500, null); //SCROLLED UP? SHOW THE ARROW.
+				$('#floating-nav-content').css('background-color','transparent');
 			}
 
 		}
